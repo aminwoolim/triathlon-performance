@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+#macOS
+.DS_Store
+
+# Environments
+.env
+.venv/
+venv
+
+# Data: ignore raw and processed data files
+data/*
+!data/README.md
+
+# Results: ignore temporary outputs, keep README/.gitkeep
+results/*
+!results/.gitkeep
