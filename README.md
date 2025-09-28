@@ -18,6 +18,17 @@ Future phases will expand to **running and swimming**, culminating in a unified 
 
 ---
 
+## 🏃🏻 Running Results & Findings
+- **Regression (Pace Prediction)
+	- Mean Absolute Error (MAE): 0.46 min/km (~28 seconds/km)
+   	- R^2: 0.85 -> model explains 85% of variance in running pace
+   	- Interpretation: The regression model accurately predicts pace using distance, elevation, and time-of-day features.
+- ** Classification (High Effectiveness Runs)
+  	- Accuracy: 80%
+  	- Recall (High Effectiveness): 1.00 -> model catches all high-performing rungs
+  	- ROC AUC: 1.0 -> perfect separation of high vs. low effectiveness
+  	- Interpretation: The classifier is highly effective at identifying "top quartile" runs (based on pace), never missing a high-performing run.
+
 ## 📂 Repository Structure
 
 triathlon-performance/
