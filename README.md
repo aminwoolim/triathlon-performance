@@ -50,7 +50,7 @@ triathlon-performance/
 ## 🚀 Roadmap
 
 - ✅ **Phase 1:** Cycling analysis (cleaning, EDA, ANOVA, ML models).  
-- 🔜 **Phase 2:** Add running and swimming datasets.  
+- ✅ **Phase 2:** Add running and swimming datasets.  
 - 🔜 **Phase 3:** Unified triathlon schema ([docs/schema.md](docs/schema.md)).  
 - 🔜 **Phase 4:** Streamlit dashboard for real-time KPIs and predictions.  
 - 🔜 **Phase 5:** Strava API integration for live data sync.  
