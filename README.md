@@ -30,6 +30,15 @@ The project combines **data engineering**, **statistical analysis**, and **machi
   	- ROC AUC: 1.0 -> perfect separation of high vs. low effectiveness
   	- Interpretation: The classifier is highly effective at identifying "top quartile" runs (based on pace).
 
+## 🏊🏻‍♂️ Swimming Results & Findings
+
+Classification (High-Effectiveness Swims):
+- Accuracy: 95%
+- Precision: 1.00 (for standard sessions)
+- Recall: 0.93 (for high-effectiveness swims)
+- ROC AUC: 0.88
+- Interpretation: The model successfully distinguishes high-performing swim sessions, through regression analysis was not performed due to limited continuous performance metrics (e.g., pace or TSS data).
+
 ## 🥇 Cross-Sport Effectiveness Summary
 
 **Goal**: Unify insights from cycling, running, and swimming to measure effectiveness across disciplines.
@@ -68,9 +77,8 @@ triathlon-performance/
 
 - ✅ **Phase 1:** Cycling analysis (cleaning, EDA, ANOVA, ML models).  
 - ✅ **Phase 2:** Add running and swimming datasets.  
-- 🔜 **Phase 3:** Unified triathlon schema ([docs/schema.md](docs/schema.md)).  
-- 🔜 **Phase 4:** Streamlit dashboard for real-time KPIs and predictions.  
-- 🔜 **Phase 5:** Strava API integration for live data sync.  
+- ✅ **Phase 3:** Unified triathlon schema ([docs/schema.md](docs/schema.md)).  
+  
 
 ---
 
