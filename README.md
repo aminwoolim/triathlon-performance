@@ -1,20 +1,21 @@
 # Triathlon Performance
 
-A data science project exploring **endurance sports performance** across cycling, running, and swimming.  
-The initial phase focuses on **cycling effectiveness** — comparing **indoor vs. outdoor sessions** and analyzing **time of day** impacts on performance.  
-Future phases will expand to **running and swimming**, culminating in a unified **triathlon performance dashboard**.
+A data science project exploring endurance performance across cycling, running, and swimming.
+The goal is to uncover what factors drive training effectiveness across sports — including time of day, indoor vs. outdoor conditions, and physical metrics such as distance, duration, and elevation.
+
+The project combines **data engineering**, **statistical analysis**, and **machine learning** to model and compare performance patterns, forming the foundation for a future triathlon performance dashboard.
 
 ---
 
-## 📊 Current Results (Cycling Phase)
+## 📊 Cycling Results & Findings
 
-- **Effectiveness definition**: higher **calories per minute** and **Training Stress Score (TSS) per minute**.  
-- **ANOVA results**:  
+**Effectiveness definition**: higher **calories per minute** and **Training Stress Score (TSS) per minute** indicate higher effectiveness  
+
+**Key Insights**:  
   - Session type (indoor vs. outdoor) showed *no significant difference*.  
   - Time of day (morning vs. afternoon/evening) showed a *significant effect* on both calories burned and TSS.  
-- **Machine learning models (TensorFlow)**:  
-  - Regression model predicts calories per minute with strong performance (**R² ≈ 0.85**).  
-  - Classification model identifies “high effectiveness” sessions with promising accuracy.
+  - Regression model (Tensorflow) predicts calories per minute with strong performance (**R² ≈ 0.85**).  
+  - Classification model identifies “high effectiveness” sessions.
 
 ---
 
@@ -22,12 +23,28 @@ Future phases will expand to **running and swimming**, culminating in a unified 
 - **Regression (Pace Prediction)
 	- Mean Absolute Error (MAE): 0.46 min/km (~28 seconds/km)
    	- R^2: 0.85 -> model explains 85% of variance in running pace
-   	- Interpretation: The regression model accurately predicts pace using distance, elevation, and time-of-day features.
+   	- Interpretation: Distance, elevation, and time-of-day are strong predictors of pace.
 - ** Classification (High Effectiveness Runs)
   	- Accuracy: 80%
   	- Recall (High Effectiveness): 1.00 -> model catches all high-performing rungs
   	- ROC AUC: 1.0 -> perfect separation of high vs. low effectiveness
-  	- Interpretation: The classifier is highly effective at identifying "top quartile" runs (based on pace), never missing a high-performing run.
+  	- Interpretation: The classifier is highly effective at identifying "top quartile" runs (based on pace).
+
+## 🥇 Cross-Sport Effectiveness Summary
+
+**Goal**: Unify insights from cycling, running, and swimming to measure effectiveness across disciplines.
+
+**Normalized Metric:**
+Each sport's effectiveness score was scaled from 0-1 (e.g., lower pace = higher effectiveness for running).
+
+**Findings:**
+- **Distance** and **duration** are universal predictors of performance across sports
+- **Morning sessions** show slightly higher average effectiveness across all activities
+- Cycling effectiveness varies most by duration, while running is more sensitive to elevation
+- Combined model explains ~80% of variance in session effectiveness (R^2 = 0.8)
+
+See anaysis notebook:
+notebooks/triathlon_04_effectiveness_summary.ipynb
 
 ## 📂 Repository Structure
 
@@ -35,7 +52,7 @@ triathlon-performance/
 ├── data/              # raw and cleaned datasets
 ├── docs/              # schema and design notes
 │   └── schema.md
-├── notebooks/         # Jupyter notebooks (currently cycling only)
+├── notebooks/         # Jupyter notebooks for each sport
 │   ├── cycling_01_data_cleaning.ipynb
 │   ├── cycling_02_eda_anova.ipynb
 │   └── cycling_03_ml_models.ipynb
